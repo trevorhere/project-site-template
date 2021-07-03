@@ -1,65 +1,48 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Image from 'next/image'
+import { useRouter } from 'next/router'
+import ProjectList from './components/projectList'
+import *  as siteData from './siteData'
 
 export default function Home() {
+  const router = useRouter()
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <>
+    <div className=" ">
+      <div className="flex  w-screen fixed  h-screen items-center content-center  mx-auto sm:px-6 lg:px-8 bg-blue-100">
+      <div className="flex flex-col max-w-4xl mx-auto items-center bg-red-100 ">
+        <div className="flex flex-row  items-center bg-red-200">
+          <div className="mr-4 flex-shrink-0 self-center">
+            <Image className="rounded-full" src={siteData.selfie} alt="Picture of the author" />
+          </div>
+          <div>
+            <h4 className="text-4xl font-bold">{siteData.firstName} {siteData.lastName}</h4>
+            <h4 className="text-2xl font-thin">{siteData.title}</h4>
+          </div>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+        <div className="bg-blue-500 mt-6 text-2xl">
+          <p>{siteData.bio}</p>
+        </div>
+        <div className=" mt-6 text-xl">
+          <p className="flex flex-row">{siteData.links.map(link => { 
+            return siteData.userIcons 
+            ? <link.icon alt={link.link} onClick={()=> router.push(link.link)}
+              className="mx-2 fill-current text-gray-500 hover:text-black" href={link.link}>{link.name}</link.icon>
+            : <a className="mx-2" href={link.link}>{link.name}</a>
+          })}
+          </p>
+        </div>
+      </div>
     </div>
+   </div>
+   <div className="flex mt-10 absolute w-full h-screen items-center content-center  mx-auto sm:px-6 lg:px-8 bg-blue-300 slider-up">
+     <ProjectList projects={siteData.portfolioItems}/> 
+     <style jsx>{`.slider-up {margin: 100vh auto 0;}`}</style>
+   </div>
+   </>
+
   )
 }
+
+   
+
