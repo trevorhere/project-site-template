@@ -101,7 +101,8 @@ let portfolioItems = [
     imageUrl: recrootBox,
     title: "Recroot Box",
     description: "Easy to user porfolio-site template",
-    link: "https://github.com/trevorhere/recrootBox/"
+    link: "https://github.com/trevorhere/recrootBox/",
+    tags: ["react.js", "next.js", "tailwind", "netlify"]
   },
   {
     imageUrl: campRank,
@@ -126,9 +127,9 @@ let showFooter = true;
 
 
 
-let blogName = "Blog";
-let blogLink = "https://blog.trevorlane.dev"
-let renderBlog = true;
+let callToActionTitle = "Blog";
+let callToActionLink = "https://blog.trevorlane.dev"
+let renderCallToAction = true;
 let gistUrl = `https://api.github.com/gists/68cc754fb298f3121b5b2b4cfaa754d4`
 
 export {
@@ -147,9 +148,9 @@ export {
   darkModeSwitch,
   darkMode,
   accent,
-  blogName,
-  blogLink,
-  renderBlog,
+  callToActionLink,
+  callToActionTitle,
+  renderCallToAction,
   gistUrl,
   campRank
 };  
