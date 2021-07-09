@@ -1,9 +1,8 @@
 /* This example requires Tailwind CSS v2.0+ */
 import Image from 'next/image'
 import router from 'next/router'
-import {accent} from '../siteData'
-
-import { useEffect, useState } from "react"
+import {accent} from '../../services/siteData'
+import {useEffect, useState} from "react"
 
  const ProjectList = (props) => {
    const [projects, setProjects] = useState([]);

@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import ProjectList from './components/projectList'
-import *  as siteData from './siteData'
+import *  as siteData from '../services/siteData'
 import { FaPenNib } from "react-icons/fa";
 
 export default function Home() {
@@ -39,9 +39,9 @@ export default function Home() {
         <div className=" mt-6 text-xl">
           <p className="flex flex-row">{siteData.links.map(link => { 
             return siteData.userIcons 
-            ? <link.icon alt={link.link} onClick={()=> router.push(link.link)}
+            ? <link.icon key={link.link} alt={link.link} onClick={()=> router.push(link.link)}
               className="mx-2 fill-current text-gray-500 hover:text-black" href={link.link}>{link.name}</link.icon>
-            : <a className="mx-2" href={link.link}>{link.name}</a>
+            : <a className="mx-2" key={link.link} href={link.link}>{link.name}</a>
           })}
           </p>
         </div>
