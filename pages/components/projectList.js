@@ -25,7 +25,7 @@ import {useEffect, useState} from "react"
                 onClick={()=>router.push(project.link)}
               >
                 <style>{`.white-outline:hover{ border: 2px solid #fff`}</style>
-                <Image className=" h-48 w-full object-cover" src={project.imageUrl} alt="" />
+                <Image className=" h-48 w-full object-cover"  placeholder="blur" src={project.imageUrl} alt="" />
               </div>
               <div className="flex-1 bg-white p-6 flex flex-col justify-between">
                 <div className="flex-1">
