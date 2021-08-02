@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
+import {useRouter} from 'next/router'
 import ProjectList from './components/projectList'
 import *  as siteData from '../services/siteData'
-import { FaPenNib } from "react-icons/fa";
+import {FaPenNib} from "react-icons/fa";
 
 export default function Home() {
   const router = useRouter()
@@ -26,7 +26,7 @@ export default function Home() {
       <div className="flex flex-col max-w-4xl mx-auto items-center">
         <div className="flex flex-row  items-center">
           <div className="mr-4 flex-shrink-0 self-center">
-            <Image className="rounded-full" src={siteData.selfie} placeholder="blur" alt="Picture of the author" />
+            <Image className="rounded-full" src={siteData.selfie} placeholder="blur"  onClick={() => router.push('/')}alt="Picture of the author" />
           </div>
           <div>
             <h4 className="text-4xl font-bold">{siteData.firstName} {siteData.lastName}</h4>
@@ -55,6 +55,3 @@ export default function Home() {
 
   )
 }
-
-   
-
