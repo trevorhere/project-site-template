@@ -3,37 +3,40 @@ import Image from 'next/image'
 import {useRouter} from 'next/router'
 import ProjectList from './components/projectList'
 import *  as siteData from '../services/siteData'
-import {FaPenNib} from "react-icons/fa";
+import {FaPenNib, FaArrowDown} from "react-icons/fa";
 
 export default function Home() {
   const router = useRouter()
   return (
     <>
-      <div className="width-screen h-1 " >
-        <div className="z-20 fixed top-8 right-10 ">
+      <div className="width-screen h-1" >
+        <div className="z-20 fixed top-5 right-5 pr-10 lg:pr-20 sm:bottom-5 ">
             <button
               type="button"
-              className={`accent-bg accent-bg-hover inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white `}
+              className="flex flex-row absolute items-center px-1 py-1 border-2 border-black text-xs font-medium rounded  hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black-500"
+              // className={`accent-bg accent-bg-hover inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white `}
               onClick={() => router.push(siteData.callToActionLink)}
             > 
-            <style>{`.accent-bg{ background-color:${siteData.accent};} .accent-bg-hover:hover{ opacity: .7;}`}</style>
-              <FaPenNib className="-ml-1 mr-2 h-5 w-5" aria-hidden="true" />
-              {siteData.callToActionTitle} 
+            {/* <style>{`.accent-bg{ background-color:${siteData.accent};} .accent-bg-hover:hover{ opacity: .7;}`}</style> */}
+              <FaPenNib className="mx-1 mr-2 h-3 w-3" aria-hidden="true" />
+              <span className="hidden lg:contents ">
+                {siteData.callToActionTitle} 
+              </span>
             </button>
         </div>
       </div>
-      <div className="z-0 flex  w-screen fixed  h-screen items-center content-center  mx-auto sm:px-6 lg:px-8 ">
+      <div className="z-0 flex  w-screen fixed  h-screen items-center content-center pt-40 mx-auto sm:px-6 lg:px-8 ">
       <div className="flex flex-col max-w-4xl mx-auto items-center">
-        <div className="flex flex-row  items-center">
+        <div className="flex flex-row flex-wrap justify-center items-center">
           <div className="mr-4 flex-shrink-0 self-center">
-            <Image className="rounded-full" src={siteData.selfie} placeholder="blur"  onClick={() => router.push('/')}alt="Picture of the author" />
+            <Image className="rounded-full" src={siteData.selfie} placeholder="blur" onClick={() => router.push('/')}alt="Picture of the author" />
           </div>
           <div>
             <h4 className="text-4xl font-bold">{siteData.firstName} {siteData.lastName}</h4>
             <h4 className="text-2xl font-thin">{siteData.title}</h4>
           </div>
         </div>
-        <div className="mt-6 text-2xl">
+        <div className="my-6 text-2xl mx-3 text-justify">
           <p>{siteData.bio}</p>
         </div>
         <div className=" mt-6 text-xl">
@@ -44,6 +47,9 @@ export default function Home() {
             : <a className="mx-2" key={link.link} href={link.link}>{link.name}</a>
           })}
           </p>
+        </div>
+        <div className="mt-56 text-gray-500">
+          <FaArrowDown /> 
         </div>
       </div>
     </div>
