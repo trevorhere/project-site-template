@@ -1,15 +1,8 @@
-/* This example requires Tailwind CSS v2.0+ */
 import Image from 'next/image'
 import router from 'next/router'
 import {accent} from '../../services/siteData'
-import {useEffect, useState} from "react"
-
- const ProjectList = (props) => {
-   const [projects, setProjects] = useState([]);
-
-   useEffect(() => {
-     setProjects(props?.projects)
-   }, [props])
+ 
+const ProjectList = (props) => {
 
   return (
     <div className={`flex items-center content-center mx-auto relative pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8`}>
@@ -18,7 +11,7 @@ import {useEffect, useState} from "react"
           <h2 className="text-3xl tracking-tight font-extrabold text-white sm:text-4xl">Recent Projects</h2>
         </div>
         <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-          { !!projects.length && projects.map(project => (
+          { !!props.projects.length && props.projects.map(project => (
             <div key={project.title} className="hover:border-white border-transparent border-2 flex flex-col rounded-lg shadow-lg overflow-hidden ">
               <div 
                 className=".white-outline flex-shrink-0 "
@@ -28,7 +21,8 @@ import {useEffect, useState} from "react"
                 <Image 
                   className="h-48 w-full object-cover" 
                   layout="responsive"  
-                  placeholder="blur" 
+                  placeholder="blur"
+                  blurDataURL={project?.imageUrl?.blurDataURL}
                   src={project.imageUrl} 
                   alt="portfilio-image" 
                   layout="responsive"

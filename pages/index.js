@@ -8,20 +8,21 @@ import {getPlaiceholder} from "plaiceholder";
 
 
 export const getStaticProps = async () => {
-
-  console.log('test', siteData.selfie)
   let selfieBlur = await getPlaiceholder("/images/trevor.png");
-
+  let hashedPosts =  siteData?.portfolioItems.map(post => {
+    return post;
+  })
 
 
   return {
       props: {
-        selfieBlur, 
+        selfieBlur,
+        hashedPosts
       }
     }
 }
 
-export default function Home({selfieBlur}) {
+export default function Home({selfieBlur, hashedPosts}) {
   const router = useRouter()
   return (
     <>
@@ -56,7 +57,7 @@ export default function Home({selfieBlur}) {
             <div 
             className={`absolute inset-0 w-full h-full transform scale-150 filter blur-2xl`}/>
           </div>
-          <div>
+          <div className="mx-4">
             <h4 className="text-4xl font-bold">{siteData.firstName} {siteData.lastName}</h4>
             <h4 className="text-2xl font-thin">{siteData.title}</h4>
           </div>
@@ -79,7 +80,7 @@ export default function Home({selfieBlur}) {
       </div>
     </div>
    <div className="accent-bg z-30 flex mt-10 absolute slider-up w-full min-h-screen items-center content-center  mx-auto sm:px-6 lg:px-8  lg:.slider_up_small ">
-     <ProjectList accentColor={siteData.accent} projects={siteData.portfolioItems}/> 
+     <ProjectList accentColor={siteData.accent} projects={hashedPosts}/> 
      <style jsx>{`.accent-bg{background-color: ${siteData.accent}} .slider-up {margin: 100vh auto 0;} .a .slider_up_small{margin: 200vh auto 0;}`}</style>
    </div>
    </>
