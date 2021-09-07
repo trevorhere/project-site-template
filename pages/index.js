@@ -4,8 +4,24 @@ import {useRouter} from 'next/router'
 import ProjectList from './components/projectList'
 import *  as siteData from '../services/siteData'
 import {FaPenNib, FaArrowDown} from "react-icons/fa";
+import {getPlaiceholder} from "plaiceholder";
 
-export default function Home() {
+
+export const getStaticProps = async () => {
+
+  console.log('test', siteData.selfie)
+  let selfieBlur = await getPlaiceholder("/images/trevor.png");
+
+
+
+  return {
+      props: {
+        selfieBlur, 
+      }
+    }
+}
+
+export default function Home({selfieBlur}) {
   const router = useRouter()
   return (
     <>
@@ -25,18 +41,27 @@ export default function Home() {
             </button>
         </div>
       </div>
-      <div className="z-0 flex  w-screen fixed  h-screen items-center content-center pt-40 mx-auto sm:px-6 lg:px-8 ">
-      <div className="flex flex-col max-w-4xl mx-auto items-center">
+      <div className="z-0 flex mt-100 w-screen fixed  h-screen items-center content-center pt-40 mx-auto sm:px-6 lg:px-8 ">
+      <div className="flex flex-col max-w-4xl mt-6 mx-auto items-center">
         <div className="flex flex-row flex-wrap justify-center items-center">
-          <div className="mr-4 flex-shrink-0 self-center">
-            <Image className="rounded-full" src={siteData.selfie} placeholder="blur" onClick={() => router.push('/')}alt="Picture of the author" />
+          <div className="flex-shrink-0 self-center">
+            <Image 
+              className="rounded-full" 
+              src={siteData.selfie} 
+              placeholder="blur" 
+              blurDataURL={selfieBlur}
+              onClick={() => router.push('/')}
+              alt="Picture of the author"
+            />
+            <div 
+            className={`absolute inset-0 w-full h-full transform scale-150 filter blur-2xl`}/>
           </div>
           <div>
             <h4 className="text-4xl font-bold">{siteData.firstName} {siteData.lastName}</h4>
             <h4 className="text-2xl font-thin">{siteData.title}</h4>
           </div>
         </div>
-        <div className="my-6 text-2xl mx-3 text-justify">
+        <div className="my-6 text-xl mx-3 text-justify">
           <p>{siteData.bio}</p>
         </div>
         <div className=" mt-6 text-xl">
