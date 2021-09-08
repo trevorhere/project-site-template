@@ -3,7 +3,6 @@ import router from 'next/router'
 import {accent} from '../../services/siteData'
  
 const ProjectList = (props) => {
-
   return (
     <div className={`flex items-center content-center mx-auto relative pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8`}>
       <div className="relative max-w-7xl mx-auto">
@@ -18,14 +17,11 @@ const ProjectList = (props) => {
                 onClick={()=>router.push(project.link)}
               >
                 <style>{`.white-outline:hover{ border: 2px solid #fff`}</style>
-                <Image 
+                <Image
                   {...project.imageUrl}
                   className="h-48 w-full object-cover" 
-                  layout="responsive"  
                   placeholder="blur"
-                  src={project.imageUrl} 
-                  alt="portfilio-image" 
-                  layout="responsive"
+                  alt="portfilio image" 
                 />
               </div>
               <div className="flex-1 bg-white p-6 flex flex-col justify-between">
