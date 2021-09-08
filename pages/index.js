@@ -4,26 +4,11 @@ import {useRouter} from 'next/router'
 import ProjectList from './components/projectList'
 import *  as siteData from '../services/siteData'
 import {FaPenNib, FaArrowDown} from "react-icons/fa";
-import {getPlaiceholder} from "plaiceholder";
 
 
-export const getStaticProps = async () => {
-  let selfieBlur = await getPlaiceholder("/images/trevor.png");
-  let hashedPosts =  siteData?.portfolioItems.map(post => {
-    return post;
-  })
-
-
-  return {
-      props: {
-        selfieBlur,
-        hashedPosts
-      }
-    }
-}
-
-export default function Home({selfieBlur, hashedPosts}) {
+export default function Home() {
   const router = useRouter()
+  console.log('image', siteData.selfie)
   return (
     <>
       <div className="width-screen h-1" >
@@ -47,10 +32,9 @@ export default function Home({selfieBlur, hashedPosts}) {
         <div className="flex flex-row flex-wrap justify-center items-center">
           <div className="flex-shrink-0 self-center">
             <Image 
+              {...siteData.selfie}
               className="rounded-full" 
-              src={siteData.selfie} 
-              placeholder="blur" 
-              blurDataURL="LEHV6nWB2yk8pyoJadR*.7kCMdnj"
+              placeholder="blur"
               onClick={() => router.push('/')}
               alt="Picture of the author"
             />
@@ -80,7 +64,7 @@ export default function Home({selfieBlur, hashedPosts}) {
       </div>
     </div>
    <div className="accent-bg z-30 flex mt-10 absolute slider-up w-full min-h-screen items-center content-center  mx-auto sm:px-6 lg:px-8  lg:.slider_up_small ">
-     <ProjectList accentColor={siteData.accent} projects={hashedPosts}/> 
+     <ProjectList accentColor={siteData.accent} projects={siteData.portfolioItems}/> 
      <style jsx>{`.accent-bg{background-color: ${siteData.accent}} .slider-up {margin: 100vh auto 0;} .a .slider_up_small{margin: 200vh auto 0;}`}</style>
    </div>
    </>

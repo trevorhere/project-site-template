@@ -23,12 +23,9 @@ const ProjectList = (props) => {
                   className="h-48 w-full object-cover" 
                   layout="responsive"  
                   placeholder="blur"
-                  blurDataURL="LEHV6nWB2yk8pyoJadR*.7kCMdnj"
                   src={project.imageUrl} 
                   alt="portfilio-image" 
                   layout="responsive"
-                  width={500}
-                  height={250}
                 />
               </div>
               <div className="flex-1 bg-white p-6 flex flex-col justify-between">
