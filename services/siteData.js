@@ -5,12 +5,13 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaFileAlt } from "react-icons/fa";
 //-- For best display purposes, each of these images should have similar porportions
 
 import recrootBox from "../public/images/recrootBox_site.png";
-import campRank from "../public/images/camprank_site.png";
-import blogApp from "../public/images/blogapp-site.png";
-import taskyv from "../public/images/taskyv_site.png";
+import campRank   from "../public/images/camprank_site.png";
+import blogApp    from "../public/images/blogapp-site.png";
+import taskyv     from "../public/images/taskyv_site.png";
 import bookThinks from "../public/images/bookThinks.png";
-import currence from "../public/images/currence.png"
-import selfie from "../public/images/trevor.png"
+import currence   from "../public/images/currence.png"
+import selfie     from "../public/images/trevor.png"
+
 // import resume from "../public/assets/Resume.pdf";
 
 let darkModeSwitch = true;
