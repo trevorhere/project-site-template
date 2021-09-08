@@ -11,13 +11,6 @@ const ProjectList = (props) => {
           <h2 className="text-3xl tracking-tight font-extrabold text-white sm:text-4xl">Recent Projects</h2>
         </div>
         <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-            {!!props?.selfie &&  <Image 
-              {...props.selfie}
-              placeholder="blur"
-              onClick={() => router.push('/')}
-              alt="Picture of the author"
-            />}
-
           {!!props?.projects?.length && props?.projects?.map(project => (
             <div key={project.title} className="hover:border-white border-transparent border-2 flex flex-col rounded-lg shadow-lg overflow-hidden ">
               <div 
