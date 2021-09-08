@@ -50,7 +50,7 @@ export default function Home({selfieBlur, hashedPosts}) {
               className="rounded-full" 
               src={siteData.selfie} 
               placeholder="blur" 
-              blurDataURL={selfieBlur}
+              blurDataURL="LEHV6nWB2yk8pyoJadR*.7kCMdnj"
               onClick={() => router.push('/')}
               alt="Picture of the author"
             />

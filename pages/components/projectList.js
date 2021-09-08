@@ -11,7 +11,7 @@ const ProjectList = (props) => {
           <h2 className="text-3xl tracking-tight font-extrabold text-white sm:text-4xl">Recent Projects</h2>
         </div>
         <div className="mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none">
-          { !!props?.projects?.length && props?.projects?.map(project => (
+          {!!props?.projects?.length && props?.projects?.map(project => (
             <div key={project.title} className="hover:border-white border-transparent border-2 flex flex-col rounded-lg shadow-lg overflow-hidden ">
               <div 
                 className=".white-outline flex-shrink-0 "
@@ -19,10 +19,11 @@ const ProjectList = (props) => {
               >
                 <style>{`.white-outline:hover{ border: 2px solid #fff`}</style>
                 <Image 
+                  {...project.imageUrl}
                   className="h-48 w-full object-cover" 
                   layout="responsive"  
                   placeholder="blur"
-                  blurDataURL={project?.imageUrl?.blurDataURL}
+                  blurDataURL="LEHV6nWB2yk8pyoJadR*.7kCMdnj"
                   src={project.imageUrl} 
                   alt="portfilio-image" 
                   layout="responsive"
