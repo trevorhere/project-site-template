@@ -84,48 +84,109 @@ let portfolioItems = [
     imageUrl: currence,
     title: "Currence",
     description: "Twitter clone built using React.js, Serverless, & AWS",
-    link: "https://currence.netlify.com/"
+    link: "https://currence.netlify.com/",
+    links: [{
+      title: "Live",
+      link: "https://currence.netlify.com/"
+    }],
   },
   {
     imageUrl: taskyv,
     title: "Taskyv",
     description: "Sleek, sexy task manager",
-    link: "https://taskyv.herokuapp.com/"
+    link: "https://taskyv.herokuapp.com/",
+    links: [{
+      title: "Live",
+      link: "https://taskyv.herokuapp.com/",
+    }],
   },
   {
     imageUrl: bookThinks,
     title: "BookThinks",
     description: "Book-centric note recorder",
-    link: "https://bookthinks.herokuapp.com/"
+    link: "https://bookthinks.herokuapp.com/",
+    links: [{
+      title: "Live",
+      link: "https://bookthinks.herokuapp.com/",
+    }],
+
   },
   {
     imageUrl: recrootBox,
     title: "Recroot Box",
     description: "Easy to user porfolio-site template",
     link: "https://github.com/trevorhere/recrootBox/",
+    links: [{
+      title: "Live",
+      link: "https://github.com/trevorhere/recrootBox/",
+    }],
     tags: ["react.js", "next.js", "tailwind", "netlify"]
   },
   {
     imageUrl: campRank,
     title: "CampRank",
     description: "Post, rank and comment about your favorite campsites",
-    link: "https://desolate-falls-89173.herokuapp.com/"
+    link: "https://desolate-falls-89173.herokuapp.com/",
+    links: [{
+      title: "Live",
+      link: "https://desolate-falls-89173.herokuapp.com/"
+    }]
   },
   {
     imageUrl: blogApp,
     title: "Blog App",
     description: "Easy access blog app.",
-    link: "https://boiling-harbor-27900.herokuapp.com"
+    link: "https://boiling-harbor-27900.herokuapp.com",
+    links: [{
+        title: "Live",
+        link: "https://boiling-harbor-27900.herokuapp.com",
+      },{
+        title: "Blog Post",
+        link: "/post/blogApp",
+      }]
   }
 ];
+
+let posts = [{
+  id: "blogApp",
+  tags: [],
+  dateTime: "test",
+  date: "10/31/2019",
+  readingTime: "",
+  title: "Blog App",
+  content: 
+  `So I did it. I made a blog. Here it is. What to blog about? I don't know! But it's here should I ever need it. I'll be using github gists as a 'backend' to host the blog posts and react to build a static site and render the blog posts on a 'frontend'. This is the easiest, most basic way that I could think of to get a blog up and running. That works for me because, in my opinion, less is more. Less means faster iteration, quicker content creation and no monthy emails from AWS asking for a few bucks to pay for an EC2 instance. 
+  
+  In the future
+  
+  It would have been nice to have some more meta data, like a date or blurb. But, i couldn't figure out a way to do this with gists. I tried writing the gist in json. but parsing that becomes really difficult when you have many paragraphs as a value in an object. 
+  
+  Conclusion
+  
+  Thats it for now, maybe i'll try to update this weekly with personal news and things. we'll see. `  ,
+  contentType: "", // text or markdown
+  href: "https://i.imgur.com/ZLe9N4s.png",
+  author: {
+    href: "https://avatars.githubusercontent.com/u/15148900",
+    name: "Trevor Lane",
+    imageUrl: "https://avatars.githubusercontent.com/u/15148900"
+
+  }
+}]
+   
+let paths = {  // generates routes for each post automatically
+  paths: posts.map(post => {
+      return {params: {id: post.id}}
+    }),
+  
+  fallback: true,
+}
 
 let showEmailCapture = true;
 
 // If you do not want the footer to be displayed (it just has a link to the github repo
 // -- for this template ) then you can set showFooter to false and it will go away.
 let showFooter = true;
-
-
 
 
 let callToActionTitle = "Blog";
@@ -153,5 +214,7 @@ export {
   callToActionTitle,
   renderCallToAction,
   gistUrl,
-  campRank
+  campRank,
+  posts,
+  paths
 };  
