@@ -157,11 +157,11 @@ let posts = [{
   content: 
   `So I did it. I made a blog. Here it is. What to blog about? I don't know! But it's here should I ever need it. I'll be using github gists as a 'backend' to host the blog posts and react to build a static site and render the blog posts on a 'frontend'. This is the easiest, most basic way that I could think of to get a blog up and running. That works for me because, in my opinion, less is more. Less means faster iteration, quicker content creation and no monthy emails from AWS asking for a few bucks to pay for an EC2 instance. 
   
-  In the future
+  ## In the future
   
   It would have been nice to have some more meta data, like a date or blurb. But, i couldn't figure out a way to do this with gists. I tried writing the gist in json. but parsing that becomes really difficult when you have many paragraphs as a value in an object. 
   
-  Conclusion
+  ## Conclusion
   
   Thats it for now, maybe i'll try to update this weekly with personal news and things. we'll see. `  ,
   contentType: "", // text or markdown

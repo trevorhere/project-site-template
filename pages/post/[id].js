@@ -2,6 +2,7 @@ import React, { useEffect, useState} from 'react';
 import {useRouter} from 'next/router'
 import *  as siteData from '../../services/siteData'
 import {FaPencilAlt} from 'react-icons/fa'
+import {Converter} from 'showdown';
 
 // const AsyncMarkDown = dynamic(import('react-markdown'), { ssr: false });
 // const AsyncGfm = dynamic(import('remark-gfm'), { ssr: false });
@@ -11,15 +12,35 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({params}) {
-  
-  // MDX text - can be from a local file, database, anywhere
   const {id} = params;
   console.log('posts', siteData.posts)
+  console.log('id', id);
+
+  console.log(siteData.posts.map(post => console.log('test', post)))
+  const post = siteData.posts.find(post => post.id === id);
+
+  if(!post){
+    console.log('no post found');
+    return {
+      props: {
+        post: null
+      }
+    }
+  }
+
+
+
+
+
+  const converter = new Converter({ metadata: true });
+  let content = converter.makeHtml(post?.content);
+  const meta = converter.getMetadata();
+  // MDX text - can be from a local file, database, anywhere
   // const mdxSource = await serialize(source)
-  return { props: { posts: siteData?.posts, id } }
+  return { props: { posts: siteData?.posts, new_post: post, id, content, meta } }
 }
 
-export default function Post({posts, id}) {
+export default function Post({posts, id, new_post, content}) {
   const router = useRouter()
   const [post, setPost] = useState(posts.find(post => post.id === id) || null);
   const [loading, setIsLoading]= useState(false);
@@ -80,6 +101,7 @@ export default function Post({posts, id}) {
               />
             </div> 
             <p className="whitespace-pre-line">{`${post?.content}`}</p>
+            <div dangerouslySetInnerHTML={{ __html: content }} />
               {/* <AsyncMarkDown  className="markdown" remarkPlugins={[AsyncGfm]} children={post?.content} /> */}
         </div>
       </div>

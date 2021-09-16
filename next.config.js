@@ -1,4 +1,6 @@
-module.exports = {
+const withMDX = require('@next/mdx')()
+
+module.exports = withMDX({
   target: "serverless",
   images: {
     domains: ['i.imgur.com'],
@@ -10,4 +12,5 @@ module.exports = {
 
     return config;
   }
-}
+
+});
