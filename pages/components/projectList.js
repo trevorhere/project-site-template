@@ -3,8 +3,6 @@ import router from 'next/router'
 import {accent} from '../../services/siteData'
  
 const ProjectList = (props) => {
-  console.log('test props', props)
-  console.log('test props', props?.projects[props.projects.length - 1])
   return (
     <div className={`flex items-center content-center mx-auto relative pt-16 pb-20 px-4 sm:px-6 lg:pt-24 lg:pb-28 lg:px-8`}>
       <div className="relative max-w-7xl mx-auto">
