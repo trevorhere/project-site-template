@@ -24,9 +24,9 @@ const ProjectList = (props) => {
                   alt="portfilio image" 
                 />
               </div>
-              <div className="flex-1 bg-white p-6 flex flex-col justify-between">
-                <div className="flex-1">
-                  <a href={project.link} className="block mt-2">
+              <div className="h-full bg-white p-6 flex flex-col justify-between">
+                <div className="">
+                  <a href={project.link} className="block ">
                     <p className="text-xl font-semibold text-gray-900 hover:underline">{project.title}</p>
                     <p className="mt-3 text-base text-gray-500">{project.description}</p>
                   </a>
@@ -37,13 +37,35 @@ const ProjectList = (props) => {
                       return ` ${tag}${(i === project?.tags?.length - 1) ? '' : ','}`
                     })}
                   </p>
-              <div>
+              <div className="flex justify-end">
                   {project?.links?.map((link, i) => {
-                    return <div>
-                      <a href={link.link} key={i} className="block mt-2">
-                        <p className="text-xl font-semibold text-gray-900 hover:underline">{link.title}</p>
-                      </a>
-                    </div>
+                    return (
+                      <button
+                        onClick={()=>router.push(link.link)}
+                        key={i}
+                        type="button"
+                        className={`
+                          inline-flex
+                          items-center
+                          px-2.5
+                          py-1.5
+                          mx-1
+                          mt-5
+                          border
+                          border-transparent
+                          text-xs
+                          font-medium
+                          rounded
+                          shadow-sm text-white bg-gray-600 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500`}
+                      >
+                        {link.title} 
+                      </button>
+                    )
+                    // <div>
+                    //   <a href={link.link} key={i} className="block mt-2">
+                    //     <p className="text-xl font-semibold text-gray-900 hover:underline">{link.title}</p>
+                    //   </a>
+                    // </div>
                   })}
 
               </div>

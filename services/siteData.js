@@ -81,37 +81,6 @@ let portfolioTitle = "Recent Projects"
 let portfolioSectionBackgroundColor = "#003344"
 let portfolioItems = [
   {
-    imageUrl: currence,
-    title: "Currence",
-    description: "Twitter clone built using React.js, Serverless, & AWS",
-    link: "https://currence.netlify.com/",
-    links: [{
-      title: "Live",
-      link: "https://currence.netlify.com/"
-    }],
-  },
-  {
-    imageUrl: taskyv,
-    title: "Taskyv",
-    description: "Sleek, sexy task manager",
-    link: "https://taskyv.herokuapp.com/",
-    links: [{
-      title: "Live",
-      link: "https://taskyv.herokuapp.com/",
-    }],
-  },
-  {
-    imageUrl: bookThinks,
-    title: "BookThinks",
-    description: "Book-centric note recorder",
-    link: "https://bookthinks.herokuapp.com/",
-    links: [{
-      title: "Live",
-      link: "https://bookthinks.herokuapp.com/",
-    }],
-
-  },
-  {
     imageUrl: recrootBox,
     title: "Recroot Box",
     description: "Easy to user porfolio-site template",
@@ -123,15 +92,52 @@ let portfolioItems = [
     tags: ["react.js", "next.js", "tailwind", "netlify"]
   },
   {
-    imageUrl: campRank,
-    title: "CampRank",
-    description: "Post, rank and comment about your favorite campsites",
-    link: "https://desolate-falls-89173.herokuapp.com/",
+    imageUrl: currence,
+    title: "Currence",
+    description: "Twitter clone built using React.js, Serverless, & AWS",
+    link: "https://currence.netlify.com/",
     links: [{
-      title: "Live",
-      link: "https://desolate-falls-89173.herokuapp.com/"
-    }]
+      title: "Client Source",
+      link: "https://github.com/trevorhere/currence_client"
+    },{
+      title: "Server Source",
+      link: "https://github.com/trevorhere/currence_server"
+    }],
+
+    tags: ["react", "serverless", "node", "aws"]
   },
+  // {
+  //   imageUrl: taskyv,
+  //   title: "Taskyv",
+  //   description: "Sleek, sexy task manager",
+  //   link: "https://taskyv.herokuapp.com/",
+  //   links: [{
+  //     title: "Live",
+  //     link: "https://taskyv.herokuapp.com/",
+  //   }],
+  // },
+  // {
+  //   imageUrl: bookThinks,
+  //   title: "BookThinks",
+  //   description: "Book-centric note recorder",
+  //   link: "https://bookthinks.herokuapp.com/",
+  //   links: [{
+  //     title: "Live",
+  //     link: "https://bookthinks.herokuapp.com/",
+  //   }],
+
+  // },
+  // {
+  //   imageUrl: campRank,
+  //   title: "CampRank",
+  //   description: "Post, rank and comment about your favorite campsites",
+  //   link: "https://desolate-falls-89173.herokuapp.com/",
+  //   links: [{
+  //     title: "Live",
+  //     link: "https://desolate-falls-89173.herokuapp.com/"
+  //   }],
+  //   tags: ["javascript", "html", "css", "heroku"]
+  // },
   {
     imageUrl: blogApp,
     title: "Blog App",
@@ -141,7 +147,7 @@ let portfolioItems = [
         title: "Live",
         link: "https://boiling-harbor-27900.herokuapp.com",
       },{
-        title: "Blog Post",
+        title: "Post",
         link: "/post/blogApp",
       }]
   }
