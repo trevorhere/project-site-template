@@ -1,6 +1,5 @@
 import { FaGithub, FaLinkedin, FaEnvelope, FaFileAlt } from "react-icons/fa";
-
-
+import {keyboardPostText} from './posts/keyboard_build'
 //Import images for your portfolio here:
 //-- For best display purposes, each of these images should have similar porportions
 
@@ -10,6 +9,7 @@ import blogApp    from "../public/images/blogapp-site.png";
 import taskyv     from "../public/images/taskyv_site.png";
 import bookThinks from "../public/images/bookThinks.png";
 import currence   from "../public/images/currence.png"
+import keyboard   from "../public/images/keyboard.png"
 import selfie     from "../public/images/trevor.png"
 
 // import resume from "../public/assets/Resume.pdf";
@@ -139,154 +139,32 @@ let portfolioItems = [
   //   tags: ["javascript", "html", "css", "heroku"]
   // },
   {
-    imageUrl: blogApp,
-    title: "Blog App",
-    description: "Easy access blog app.",
-    link: "https://boiling-harbor-27900.herokuapp.com",
+    imageUrl: keyboard,
+    tags: ['3D Print, Build, DIY'],
+    title: "DIY Keyboard Build",
+    description: "Custom built Dactyl-Manuform 5X7",
     links: [{
-        title: "Live",
-        link: "https://boiling-harbor-27900.herokuapp.com",
-      },{
         title: "Post",
-        link: "/post/blogApp",
+        link: "/post/keyboardBuild",
       }]
   }
 ];
 
-let posts = [{
-  id: "blogApp",
-  tags: [],
+
+let posts = [
+  {
+  id: "keyboardBuild",
+  tags: ['3D Print, Build, DIY'],
   dateTime: "test",
-  date: "10/31/2019",
-  readingTime: "",
-  title: "Blog App",
-  content: 
-  `So, you have an idea for an app and you're looking for someone to help you build it. Maybe you already have part of your app built. Maybe you're mostly finished with your app but need help with one remaining piece.
-
-Whatever the case, BYU Dev Club would love to help you! We frequently receive requests for help with software development. As you can imagine, some of these requests are successful and some are not. I wrote this article in an effort to increase that success rate.
-
-This article contains:
-
-    1. Two ways to get in touch with us.
-    2. Things to do.
-    3. Things not to do.
-    4 Alternative options.
-
-### 1. Get in touch with us
-#### Fill out our jobs form.
-
-This form asks you a few questions about your idea, then posts a message to the #jobs channel in our slack group. (You don't need to be a student to sign up!)
-
-This is an example of a message that was posted into the jobs channel using our form:
-
-
-      
-
-      
-
-      
-
-      
-
-      
-
-
-  
-
-  
-No alt text provided for this image
-Join our slack channel and come talk to us there.
-
-Slack is a messaging app that we use for club communications. You can join our channel and message club members about your ideas or questions.
-
-
-### 2. Things to do
-#### Show, don't tell.
-
-A picture is worth a thousand words, right? Don't tell us about your idea, show us! You might have mock ups designed using the latest professional design software. Or, you might have some pictures of a drawing done on a napkin. Whatever you have, we want to see it!
-Create a company profile or page on any of the following websites:
-
-    crunchbase
-    linkedin
-    facebook
-    angel list
-
-This list isn't comprehensive; any site where you can explain your idea or post images of wire frames or mock ups will work.
-Put together a simple landing page for you idea.
-
-Creating a simple landing page for your idea is an effective way to build credibility. There are a ton of great tools that can help you do this with ease. Two popular drag-and-drop website builders are wix.com and squarespace.com .
-
-Here's a recent example of a landing page that a club member made:
-
-
-      
-
-      
-
-      
-
-      
-
-      
-
-
-  
-
-  
-No alt text provided for this image
-
-Even just a barebones site goes a long way!
-
-### 3. Things not to do
-#### Offering very little ownership in exchange for work. 
-
-Discussing the distribution of ownership in a business can be complicated, especially for startups. That being said, it's usually obvious when someone is getting the bad end of a bargain. It helps if you're open to fair distribution of ownership for potential founding members.
-Offering very little money in exchange for work.
-
-Yeah, we're poor college students, but we're not that poor. We frequently intern at high paying companies over the summer. Do market research and offer a competitive wage based on the skill set needed for your project.
-
-Consider the table below which shows the current pay rates for BYU CS TAs. At the very minimum, freshmen are getting paid 10$/hr to answer a questions, occasionally grade assignments and work on their own homework.
-
-These jobs aren't hard to come by. Point being, a senior can get $15/hr to do what might be the world's easiest job, so you may need to adjust your expectations accordingly.
-
-
-      
-
-      
-
-      
-
-      
-
-      
-
-
-  
-
-  
-No alt text provided for this image
-Offering mentorship or experience in exchange for work.
-
-Although this approach may work in other fields, I've never seen a successful request of this kind when it comes to finding software engineering talent.
-
-### 4. Alternative options
-#### Look at other places on campus.
-
-There are many talented students at BYU and not all of them are members of our club. The Rollins Center for Entrepreneurship has a webpage with links you can use to find talented BYU students involved in other similar on campus clubs and organizations.
-The best route for you might be learning to build software on your own.
-
-Many people have ideas but feel they don't have the necessary skills to design and build an app. The truth is, there are plenty of good resources that you can learn from. Consider a udemy.com course or freeCodeCamp.com.
-Come learn with us.
-
-For the past two semesters, we've been hosting hacknights every Tuesday at 7:30pm where we teach beginners how to code. You can join the slack channel linked above and ask about this if you're interested. We'd love to see you there.
-   `  ,
-  contentType: "", // text or markdown
+  date: "09/26/2021",
+  readingTime: "10 min",
+  title: "DIY Keyboard Build",
+  content: keyboardPostText,
   href: "https://i.imgur.com/ZLe9N4s.png",
   author: {
     href: "https://avatars.githubusercontent.com/u/15148900",
     name: "Trevor Lane",
     imageUrl: "https://avatars.githubusercontent.com/u/15148900"
-
   }
 }]
    
