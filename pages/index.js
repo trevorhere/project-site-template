@@ -8,7 +8,6 @@ import {FaPenNib, FaArrowDown} from "react-icons/fa";
 
 export default function Home() {
   const router = useRouter()
-  console.log('image', siteData.selfie)
   return (
     <>
       <div className="width-screen h-1" >
@@ -49,11 +48,16 @@ export default function Home() {
         <div className="my-6 text-xl mx-3 text-justify">
           <p>{siteData.bio}</p>
         </div>
-        <div className=" mt-6 text-xl">
+        <div className=" mt-6 z-30 text-xl">
           <p className="flex flex-row">{siteData.links.map(link => { 
-            return siteData.userIcons 
-            ? <link.icon key={link.link} alt={link.link} onClick={()=> router.push(link.link)}
-              className="mx-2 fill-current text-gray-500 hover:text-black" href={link.link}>{link.name}</link.icon>
+            return siteData.useIcons 
+            ? <link.icon 
+                key={link.link} 
+                alt={link.link} 
+                onClick={()=> router.push(link.link)}
+                className="mx-2 fill-current text-gray-500 hover:text-black" href={link.link}>
+                  {link.name}
+              </link.icon>
             : <a className="mx-2" key={link.link} href={link.link}>{link.name}</a>
           })}
           </p>

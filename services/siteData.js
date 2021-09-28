@@ -46,7 +46,7 @@ Feel free to check out some of my past projects below, browse some code on my gi
 // -- For display purposes, it's best to use between 3 and 5 links, but if you add more or less,
 // -- the page will adjust accordingly.
 
-let userIcons = true;
+let useIcons = true;
 
 let links = [
   {
@@ -200,7 +200,7 @@ export {
   showEmailCapture,
   showFooter,
   links,
-  userIcons,
+  useIcons,
   darkModeSwitch,
   darkMode,
   accent,
