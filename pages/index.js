@@ -25,7 +25,7 @@ export default function Home() {
             </button>
         </div>
       </div>
-      <div className="z-0 flex mt-100 w-screen fixed  h-screen items-center content-center pt-40 mx-auto sm:px-6 lg:px-8 ">
+      <div className="z-0 flex mt-100 w-screen fixed  h-screen items-center content-center mx-auto sm:px-6 lg:px-8 ">
       <div className="flex flex-col max-w-4xl mt-6 mx-auto items-center">
         <div className="flex flex-row flex-wrap justify-center items-center">
           <div className="flex-shrink-0 self-center w-36">
