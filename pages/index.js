@@ -42,7 +42,7 @@ export default function Home() {
             <h4 className="text-2xl font-thin">{siteData.title}</h4>
           </div>
         </div>
-        <div className="my-6 text-xl mx-3 text-justify">
+        <div className="my-6  text-md sm:text-xl mx-3 text-justify">
           <p>{siteData.bio}</p>
         </div>
         <div className=" mt-6 z-30 text-xl">
