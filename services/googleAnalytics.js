@@ -1,4 +1,6 @@
-// log the pageview with their URL
+export const GA_TAG = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS || null;
+
+jkk// log the pageview with their URL
 export const pageview = (url) => {
   console.log('pageview test')
   if (process.env.NODE_ENV !== "production"){
@@ -6,7 +8,7 @@ export const pageview = (url) => {
     return
   } 
 
-  window.gtag("config", process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, {
+  window.gtag("config", GA_TAG, {
     page_path: url,
   })
 }

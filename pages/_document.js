@@ -1,7 +1,6 @@
 // _document.tsx
 import Document, { Html, Head, Main, NextScript } from "next/document"
-const TRACKING_ID = process.env.NEXT_PUBLIC_GA_TRACKING_ID
-
+import GA_TAG  from '../services/googleAnalytics'
 export default class MyDocument extends Document {
   render() {
     return (
@@ -18,7 +17,7 @@ export default class MyDocument extends Document {
           {/* Analytics - Loaded only on prod */}
           {process.env.NODE_ENV === "production" ? (
             <>
-              <script async src={`https://www.googletagmanager.com/gtag/js?id=${NEXT_PUBLIC_GA_TRACKING_ID}`}></script>
+              <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TAG}`}></script>
               <script
                 dangerouslySetInnerHTML={{
                   __html: `
