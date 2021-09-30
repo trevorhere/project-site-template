@@ -56,7 +56,7 @@ export default function Home() {
           })}
           </p>
         </div>
-        <div className="mt-12 sm:mt-56text-gray-500">
+        <div className="mt-12 sm:mt-56 text-gray-500">
           <FaArrowDown /> 
         </div>
       </div>
