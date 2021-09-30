@@ -1,6 +1,6 @@
 // _document.tsx
 import Document, { Html, Head, Main, NextScript } from "next/document"
-import GA_TAG  from '../services/googleAnalytics'
+import {GA_TAG} from '../services/googleAnalytics'
 export default class MyDocument extends Document {
   render() {
     return (
@@ -12,7 +12,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap"
             rel="stylesheet"
           />
-          <link rel="icon" type="image/png" href="./favicon.png" />
+          {/* <link rel="icon" type="image/png" href="./favicon.png" /> */}
 
           {/* Analytics - Loaded only on prod */}
             <>
