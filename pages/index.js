@@ -18,10 +18,7 @@ export default function Home() {
               onClick={() => router.push(siteData.callToActionLink)}
             > 
             {/* <style>{`.accent-bg{ background-color:${siteData.accent};} .accent-bg-hover:hover{ opacity: .7;}`}</style> */}
-              <FaPenNib className="mx-1 mr-2 h-3 w-3" aria-hidden="true" />
-              <span className="hidden lg:contents ">
                 {siteData.callToActionTitle} 
-              </span>
             </button>
         </div>
       </div>
