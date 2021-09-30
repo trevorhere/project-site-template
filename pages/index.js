@@ -28,7 +28,7 @@ export default function Home() {
       <div className="z-0 flex mt-100 w-screen fixed  h-screen items-center content-center pt-40 mx-auto sm:px-6 lg:px-8 ">
       <div className="flex flex-col max-w-4xl mt-6 mx-auto items-center">
         <div className="flex flex-row flex-wrap justify-center items-center">
-          <div className="flex-shrink-0 self-center">
+          <div className="flex-shrink-0 self-center w-36">
             <Image 
               {...siteData.selfie}
               className="rounded-full" 
@@ -36,8 +36,6 @@ export default function Home() {
               onClick={() => router.push('/')}
               alt="Picture of the author"
             />
-            <div 
-            className={`absolute inset-0 w-full h-full transform scale-150 filter blur-2xl`}/>
           </div>
           <div className="mx-4">
             <h4 className="text-4xl font-bold">{siteData.firstName} {siteData.lastName}</h4>
@@ -61,7 +59,7 @@ export default function Home() {
           })}
           </p>
         </div>
-        <div className="mt-56 text-gray-500">
+        <div className="mt-12 sm:mt-56text-gray-500">
           <FaArrowDown /> 
         </div>
       </div>

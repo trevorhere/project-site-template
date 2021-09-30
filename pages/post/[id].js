@@ -32,15 +32,18 @@ export default function Post({post, content}) {
 
   return (
     <>
-      <button 
-        type="button" 
-        className="absolute top-10 right-10 items-center px-1 py-1 border-2 border-black text-xs font-medium rounded  hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black-500"
-        onClick={() => router.push('/')}
-      >
-        Back 
-      </button>
+      <div className="flex justify-end" >
+        <button 
+          type="button" 
+          className="mt-7 mr-7 px-1 py-1 border-2 border-black text-xs font-medium rounded hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black-500"
+          onClick={() => router.push('/')}
+        >
+          Back 
+        </button>
+
+      </div>
       <div className="lg:w-1/2 md:w-3/4 sm:w-full mx-auto flex-initial">
-      <div className="relative py-16 bg-white overflow-hidden">
+      <div className="relative py-8 bg-white overflow-hidden">
         <div className="relative px-4 sm:px-6 lg:px-8">
           <div className="text-lg mx-auto flex flex-row justify-between">
             <div>
