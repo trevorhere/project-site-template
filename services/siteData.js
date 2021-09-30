@@ -1,5 +1,4 @@
 import { FaGithub, FaLinkedin, FaEnvelope, FaFileAlt } from "react-icons/fa";
-import {keyboardPostText} from './posts/keyboard_build'
 //Import images for your portfolio here:
 //-- For best display purposes, each of these images should have similar porportions
 
@@ -13,6 +12,13 @@ import keyboard   from "../public/images/keyboard.png"
 import selfie     from "../public/images/trevor.png"
 
 // import resume from "../public/assets/Resume.pdf";
+
+// Post content imports here
+import {keyboardPostText} from './posts/keyboard_build'
+
+
+// Google Analytics Tracking ID:
+const googleAnalyticsId = "UA-69073529-2"
 
 let darkModeSwitch = true;
 let darkMode = false;
@@ -210,5 +216,6 @@ export {
   gistUrl,
   campRank,
   posts,
-  paths
+  paths,
+  googleAnalyticsId
 };  

@@ -4,11 +4,9 @@ import {useRouter} from 'next/router'
 import ProjectList from './components/projectList'
 import *  as siteData from '../services/siteData'
 import {FaPenNib, FaArrowDown} from "react-icons/fa"
-const isProd = process.env.NODE_ENV === 'production'
 
 export default function Home() {
   const router = useRouter()
-
   return (
     <>
       <div className="width-screen h-1" >

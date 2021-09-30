@@ -1,10 +1,14 @@
+// uncomment these lines to use analytics id from site data
+
+//import { googleAnalyticsId } from "./siteData"
+//const GA_TAG = googleAnalyticsId
+
+// comment this line to use analytics from .env
 export const GA_TAG = process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS || null;
 
 // log the pageview with their URL
 export const pageview = (url) => {
-  console.log('pageview test')
   if (process.env.NODE_ENV !== "production"){
-    console.log('pageview', url);
     return
   } 
 
@@ -19,7 +23,6 @@ export const logAnalyticsEvent = ({
   params,
 }) => {
   if (process.env.NODE_ENV !== "production"){
-    console.log('analyticsEvent: ', action, params);
     return
   } 
 
