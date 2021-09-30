@@ -15,7 +15,6 @@ export default class MyDocument extends Document {
           <link rel="icon" type="image/png" href="./favicon.png" />
 
           {/* Analytics - Loaded only on prod */}
-          {process.env.NODE_ENV === "production" ? (
             <>
               <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TAG}`}></script>
               <script
@@ -25,12 +24,11 @@ export default class MyDocument extends Document {
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
 
-                gtag('config', '<ID>');
+                gtag('config', '${GA_TAG}');
                `,
                 }}
               />
             </>
-          ) : null}
         </Head>
         <body>
           <Main />
