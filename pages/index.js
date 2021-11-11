@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <div className="width-screen h-1" >
         <div className="z-20 fixed top-5 right-5 pr-10 lg:pr-20 sm:bottom-5 ">
-            <button
+            { siteData.renderCallToAction && <button
               type="button"
               className="flex flex-row absolute items-center px-1 py-1 border-2 border-black text-xs font-medium rounded  hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black-500"
               // className={`accent-bg accent-bg-hover inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white `}
@@ -20,6 +20,7 @@ export default function Home() {
             {/* <style>{`.accent-bg{ background-color:${siteData.accent};} .accent-bg-hover:hover{ opacity: .7;}`}</style> */}
                 {siteData.callToActionTitle} 
             </button>
+            }
         </div>
       </div>
       <div className="z-0 flex mt-100 w-screen fixed  h-screen items-center content-center mx-auto sm:px-6 lg:px-8 ">
