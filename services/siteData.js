@@ -23,7 +23,7 @@
 // Edit Call To Action Button -------------------------
   let callToActionTitle = "Blog";
   let callToActionLink = "https://blog.trevorlane.dev"
-  let renderCallToAction = true;
+  let renderCallToAction = false;
 // ----------------------------------------------------
 
 // Background color for project cards -----------------
@@ -42,7 +42,7 @@
 
 // Set useIcons here ----------------------------------
 // -- if true, icons show, if false, link name shows
-  let useIcons = true;
+  let useIcons = false;
 // ----------------------------------------------------
 
 // Edit resume and social links here ------------------

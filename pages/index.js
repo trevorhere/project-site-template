@@ -53,7 +53,7 @@ export default function Home() {
                 className="mx-2 fill-current text-gray-500 hover:text-black" href={link.link}>
                   {link.name}
               </link.icon>
-            : <a className="mx-2" key={link.link} href={link.link}>{link.name}</a>
+            : <a className="mx-2 hover:underline" key={link.link} href={link.link}>{link.name}</a>
           })}
           </p>
         </div>
