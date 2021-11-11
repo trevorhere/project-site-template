@@ -63,7 +63,7 @@ export default function Home() {
       </div>
     </div>
    <div className="accent-bg z-30 flex mt-10 absolute slider-up w-full min-h-screen items-center content-center  mx-auto sm:px-6 lg:px-8  lg:.slider_up_small ">
-     <ProjectList accentColor={siteData.accent} projects={siteData.portfolioItems} selfie={siteData.selfie}/> 
+     <ProjectList accentColor={siteData.accent} projects={siteData.projectCardData} selfie={siteData.selfie}/> 
      <style jsx>{`.accent-bg{background-color: ${siteData.accent}} .slider-up {margin: 100vh auto 0;} .a .slider_up_small{margin: 200vh auto 0;}`}</style>
    </div>
    </>

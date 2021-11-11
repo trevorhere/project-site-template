@@ -77,9 +77,8 @@
 
 // Edit project cards here -----------------------------
 // -- including  changing title, image title, and link
-  let portfolioTitle = "Recent Projects"
-  let portfolioSectionBackgroundColor = "#003344"
-  let portfolioItems = [
+  let projectSectionTitle = "Recent Projects"
+  let projectCardData = [
     {
       imageUrl: recrootBox,
       title: "Recroot Box",
@@ -161,9 +160,8 @@
     lastName,
     title,
     bio,
-    portfolioTitle,
-    portfolioItems,
-    portfolioSectionBackgroundColor,
+    projectSectionTitle,
+    projectCardData,
     selfie,
     links,
     useIcons,
