@@ -125,6 +125,7 @@
 
 
 // Post content imports here --------------------------
+// markdown  guide => https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
   import {keyboardPostText} from './posts/keyboard_build'
 // ----------------------------------------------------
 
