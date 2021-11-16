@@ -1,3 +1,8 @@
+// To generate SSH keys for github
+// ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+// https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
+
 // Import for react font awesome icons ----------------
 // -- view icon library here => https://react-icons.github.io/react-icons/icons?name=fa
   import { FaGithub, FaLinkedin, FaEnvelope, FaFileAlt } from "react-icons/fa";
