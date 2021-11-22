@@ -69,13 +69,39 @@ Interestingly, there have been some positive social effects from having the keyb
 
 I would definitely recommend this project to anyone who uses a keyboard!  
 
+> ### If you enjoyed this post, please follow me on [Twitter](https://twitter.com/hiTrevorHere)🙏   
 
 
-### If you enjoyed this post, please follow me on [Twitter](https://twitter.com/hiTrevorHere)🙏 
+#### Build Guides I Followed:
+
+- [Nick Green's Dactyl Manuform Build Log](https://nickgreen.info/dactyl-manuform-build-log/) (esp the wiring diagrams)
+- [Kevin Eckert's Keyboard Build Stream - Dactyl Manuform](https://www.youtube.com/watch?v=dWC_8BOArzc)
 
 
+### Parts List  (Recomend:✅  Dont Recomend: ❌)
+##### Microcontrollers:
+- [❌ AITRIP ProMicro ATmega 32U4](https://www.amazon.com/gp/product/B08BJNV1J3/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1) (USB port snapped off on multiple chips)
+- [✅ ACEIRMC 32U4 Pro Mico](https://www.amazon.com/gp/product/B08DD2G9D8/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)
 
+##### 3D Printing Filaments:
+- [✅ Superfila 1.75mm PLA Black Filament](https://www.amazon.com/gp/product/B07G9HCH4W/ref=ppx_yo_dt_b_asin_title_o07_s00?ie=UTF8&psc=1)  
+- [❌ Geeetech 1.75mm PLA Transparent Filament](https://www.amazon.com/gp/product/B07C7WWX8Z/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1) (Very brittle filament)
 
+##### Cables/Wiring:
+- [✅ 3.5mm Female TRS (Aux) Cable - 4ct](https://www.amazon.com/gp/product/B0772PCC7N/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1)
+- [✅ Micro USB 6 inch extention](https://www.amazon.com/gp/product/B00B5HSC20/ref=ppx_yo_dt_b_asin_title_o06_s02?ie=UTF8&psc=1)
+- [✅ 200mA Diodes](https://www.amazon.com/gp/product/B07BVSLX7G/ref=ppx_yo_dt_b_asin_title_o00_s00?ie=UTF8&psc=1)
+- [✅ CableCreation 3.5mm Aux Cable](https://www.amazon.com/gp/product/B01N5EKQA2/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1)
+- [❌ Copper Foil Tape](https://www.amazon.com/gp/product/B01MR5DSCM/ref=ppx_yo_dt_b_asin_title_o09_s00?ie=UTF8&psc=1) (Just use wire instead)
+
+##### Nuts & Bolts:
+- [✅ Assorted Hex Bolts & Nuts Set](https://www.amazon.com/gp/product/B0772PCC7N/ref=ppx_yo_dt_b_asin_title_o05_s00?ie=UTF8&psc=1)
+- [✅ Assorted Brass Threaded Inserts Set](https://www.amazon.com/gp/product/B0784VYCYY/ref=ppx_yo_dt_b_asin_title_o06_s01?ie=UTF8&psc=1)
+
+##### Switches & Keycaps:
+- [✅ Generic Keycaps](https://www.amazon.com/gp/product/B07SGF9DTY/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1)
+- [✅ Kailh Jade Green Switches](https://www.amazon.com/gp/product/B0841H1BZF/ref=ppx_yo_dt_b_asin_title_o03_s00?ie=UTF8&psc=1)
+- [✅ Susuwatari Custom Keycap set](https://www.amazon.com/gp/product/B08TV3VSRD/ref=ppx_yo_dt_b_asin_title_o02_s00?ie=UTF8&psc=1)
 
 
 
