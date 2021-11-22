@@ -67,8 +67,11 @@ In the end, I am incredibly happy with this project. So happy that I actually bu
 
 Interestingly, there have been some positive social effects from having the keyboard on my desk. It serves as an interesting conversation piece and people love to check it out. I frequently open up a text editor so they can take it for a spin. I also get way more geek credit than I deserve, which helps when I’m BS’ing my way through some technical jargon on the job. People seem to think that because I built a keyboard, I somehow know what I’m talking about when it comes to whatever code I’m trying to hammer together. 
 
-I would definitely recommend this project to anyone who uses a keyboard!
+I would definitely recommend this project to anyone who uses a keyboard!  
 
+
+
+### If you enjoyed this post, please follow me on [Twitter](https://twitter.com/hiTrevorHere)🙏 
 
 
 
