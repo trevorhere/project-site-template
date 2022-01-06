@@ -127,10 +127,26 @@
 // Post content imports here --------------------------
 // markdown  guide => https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
   import {keyboardPostText} from './posts/keyboard_build'
+  import {markdownWalkthrough} from './posts/markdown_intro'
 // ----------------------------------------------------
 
 // Add blog post data here -----------------------------
   let posts = [
+    {
+    id: "markdown",
+    tags: [''],
+    dateTime: "test",
+    date: "09/26/2021",
+    readingTime: "10 min",
+    title: "Markdown Walkthrough",
+    content: markdownWalkthrough,
+    href: "https://i.imgur.com/ZLe9N4s.png",
+    author: {
+      href: "https://avatars.githubusercontent.com/u/15148900",
+      name: "Trevor Lane",
+      imageUrl: "https://avatars.githubusercontent.com/u/15148900"
+    }
+  },
     {
     id: "keyboardBuild",
     tags: ['3D Print, Build, DIY'],
@@ -145,7 +161,8 @@
       name: "Trevor Lane",
       imageUrl: "https://avatars.githubusercontent.com/u/15148900"
     }
-  }]
+  }
+]
 // ----------------------------------------------------
    
 

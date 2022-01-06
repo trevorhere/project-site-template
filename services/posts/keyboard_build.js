@@ -1,4 +1,4 @@
-export const keyboardPostText = `#### Inspiration
+export const keyboardPostText = `# Inspiration
 
 Sometime last year I came across this [talk](https://www.youtube.com/watch?v=uk3A41U0iO4) given by Matt Adereth about using Clojure to generate firmware for custom built keyboards. 
 
@@ -31,7 +31,7 @@ After searching for while, I decided to build  the Dactyl-Manuform 5X7:
 
 ![Dactyl-Manuform](https://i.imgur.com/bX7kp57.png)
 
-#### Build Process:
+# Build Process:
 
 I'll save the gritty build log for another post and keep the build description somewhat short here. There are roughly four main parts of a keyboard build:
 
@@ -60,7 +60,7 @@ I'll save the gritty build log for another post and keep the build description s
 
 
 
-#### Results:
+# Results:
 
 In the end, I am incredibly happy with this project. So happy that I actually built two keyboards, one for work and one for home. The project ended up ticking all of the boxes. I feel like I can program faster when I use the thumb clusters and It feels much more comfortable to use than a normal keyboard. Since I’ve been using it for well over a few months now, I would also say that it qualifies as a functional and useful 3D print. 
 
@@ -109,7 +109,7 @@ I would definitely recommend this project to anyone who uses a keyboard!
 
 
 
-STLs:
+# STLs:
 
 [Wrist rest STLs](https://www.thingiverse.com/thing:2964741)
 

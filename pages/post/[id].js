@@ -3,7 +3,8 @@ import {useRouter} from 'next/router'
 import *  as siteData from '../../services/siteData'
 import {FaPencilAlt} from 'react-icons/fa'
 import {Converter} from 'showdown';
-
+import ReactMarkdown from 'react-markdown';
+import gfm from 'remark-gfm';
 
 export async function getStaticPaths() {
   return  siteData.paths;
@@ -88,7 +89,8 @@ export default function Post({post, content}) {
                 layout="cover"
               />
             </div> 
-            <div className="markdown" dangerouslySetInnerHTML={{ __html: content }} />
+            {/* <div className="markdown" dangerouslySetInnerHTML={{ __html: content }}/> */}
+            <ReactMarkdown  className="markdown" remarkPlugins={[gfm]} children={post.content} />
         </div>
       </div>
 
