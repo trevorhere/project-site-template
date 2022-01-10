@@ -90,7 +90,7 @@ export default function Post({post, content}) {
               />
             </div> 
             {/* <div className="markdown" dangerouslySetInnerHTML={{ __html: content }}/> */}
-            <ReactMarkdown  className="markdown" remarkPlugins={[gfm]} children={post.content} />
+            <ReactMarkdown  className="markdown" remarkPlugins={[gfm]} children={post?.content} />
         </div>
       </div>
 
